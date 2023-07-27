@@ -1,16 +1,28 @@
 import { signInWithPopup, GithubAuthProvider } from 'firebase/auth'
 import { authetication } from './firebase-config'
+import useUserStore from '../store'
 
-export function signInWithGithub() {
+export function useSignInWithGithub() {
   const provider = new GithubAuthProvider()
-  signInWithPopup(authetication, provider)
-    .then(response => {
-      console.log(response)
-      console.log(response.user.displayName)
-      console.log(response.user.photoURL)
-      console.log(response.user.uid)
-    })
-    .catch(error => {
-      console.log(error)
-    })
+
+  const signIn = async () => {
+    return signInWithPopup(authetication, provider)
+      .then(response => {
+        const { uid, displayName, photoURL } = response.user
+
+        const user = {
+          id: uid,
+          name: displayName,
+          avatar_url: photoURL
+        }
+
+        return user
+      })
+      .catch(error => {
+        console.log(error)
+        return null
+      })
+  }
+
+  return { signIn }
 }

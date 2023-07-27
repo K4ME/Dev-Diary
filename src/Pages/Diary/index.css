@@ -1,0 +1,14 @@
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  align-items: center;
+  min-height: 45px;
+  height: 45px;
+  padding: 0 20px 0 20px;
+}
+
+.headerSize {
+  height: 45px !important;
+  padding: 0 !important;
+}
