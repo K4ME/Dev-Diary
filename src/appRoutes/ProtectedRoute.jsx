@@ -1,14 +1,12 @@
-import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
-import useUserStore from '../store/index'
+import { Navigate, Outlet } from "react-router-dom";
 
-export default function ProtectedRoute() {
-  const { user } = useUserStore()
-  const signed = user.id ? true : false
+export default function ProtectedRoute(User) {
+  //const user = useUserStore((state) => state.user);
+  const signed = User.User.User.id ? true : false;
 
   if (!signed) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />;
   }
 
-  return <Outlet />
+  return <Outlet />;
 }
