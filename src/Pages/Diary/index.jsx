@@ -1,8 +1,12 @@
 import { Dropdown, Layout, Menu, Avatar } from "antd";
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import AvatarDevDiary from "../../components/Avatar";
 import { Link } from "react-router-dom";
+import AvatarDevDiary from "../../components/Avatar";
 import useUserStore from "../../store";
+
+import logo from "../../assets/logo-devdiaryWhite.svg";
+
+import "./index.css";
 
 const { Header /* Content, Footer */ } = Layout;
 
@@ -21,30 +25,17 @@ export default function Diary() {
   );
 
   return (
-    <Header className={"headerSize"}>
+    <Header className={"headerSize"} style={{ backgroundColor: "#00b96b" }}>
       <div className="toolbar">
-        {/* <div className="notificationMenuPosition">
-          <LevyTimer />
-        </div>
-        <div className="notificationMenuPosition">
-          <LevyReloadPage />
-        </div>
-        <div className="notificationMenuPosition">
-          <NotificacaoMenu />
-        </div>
-        <div className="notificationMenuPosition">
-          <LevyAlterTheme />
-        </div> */}
-        <div>
-          <Dropdown menu={menu} placement="bottom" trigger={["click"]}>
-            <p className="userPosition" style={{ color: "white" }}>
-              <strong>
-                <Avatar icon={<AvatarDevDiary avatarUrl={user.avatar_url} />} />
-                {user ? `${user.name}` : ""}
-              </strong>
-            </p>
-          </Dropdown>
-        </div>
+        <img src={logo} />
+        <Dropdown menu={menu} placement="bottom" trigger={["click"]}>
+          <p className="userPosition" style={{ color: "white" }}>
+            <strong>
+              <Avatar icon={<AvatarDevDiary avatarUrl={user.avatar_url} />} />
+              {user ? `${user.name}` : ""}
+            </strong>
+          </p>
+        </Dropdown>
       </div>
     </Header>
   );

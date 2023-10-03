@@ -1,9 +1,7 @@
 import { ConfigProvider } from "antd";
 import AppRoutes from "./AppRoutes";
-import useUserStore from "./store";
 
 function App() {
-  const user = useUserStore((state) => state.user);
   return (
     <>
       <ConfigProvider
@@ -13,7 +11,7 @@ function App() {
           },
         }}
       >
-        <AppRoutes User={user} />
+        <AppRoutes />
       </ConfigProvider>
     </>
   );

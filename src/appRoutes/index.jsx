@@ -5,13 +5,13 @@ import Diary from "../pages/Diary";
 import Login from "../pages/Login";
 import NotFound from "../components/NotFound";
 
-const AppRoutes = (User) => {
+const AppRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
-        <Route element={<ProtectedRoute User={User} />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/Diario" element={<Diary />} />
         </Route>
 
