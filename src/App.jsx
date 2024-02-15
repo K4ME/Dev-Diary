@@ -1,18 +1,21 @@
 import { ConfigProvider } from "antd";
 import AppRoutes from "./AppRoutes";
+import Internationalization from "./components/Internationalization";
 
 function App() {
   return (
     <>
-      <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: "#00b96b",
-          },
-        }}
-      >
-        <AppRoutes />
-      </ConfigProvider>
+      <Internationalization>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#00b96b",
+            },
+          }}
+        >
+          <AppRoutes />
+        </ConfigProvider>
+      </Internationalization>
     </>
   );
 }

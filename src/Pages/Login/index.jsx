@@ -17,7 +17,7 @@ export default function Login() {
 
     sign_in(user);
 
-    if (user) navigate("/Diario");
+    if (user) navigate("/");
   }
 
   return (

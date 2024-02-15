@@ -4,6 +4,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Diary from "../pages/Diary";
 import Login from "../pages/Login";
 import NotFound from "../components/NotFound";
+import Profile from "../Pages/Profile";
 
 const AppRoutes = () => {
   return (
@@ -12,7 +13,9 @@ const AppRoutes = () => {
         <Route path="/login" element={<Login />} />
 
         <Route element={<ProtectedRoute />}>
-          <Route path="/Diario" element={<Diary />} />
+          <Route path="/" element={<Diary />} />
+
+          <Route path="/profile" element={<Profile />} />
         </Route>
 
         <Route path="*" element={<NotFound />} />
