@@ -5,7 +5,7 @@
 </p>
 
 <!--- Descrição do Projeto-->
-<p align="center">Documente suas idéias</p>
+<p align="center">Documente suas ideias</p>
 
 <!---logo color: #28ca4b-->
 
