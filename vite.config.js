@@ -8,6 +8,6 @@ export default defineConfig({
       usePolling: true,
     },
     open: true,
-    port: 3000,
+    //port: 3001,
   },
 });

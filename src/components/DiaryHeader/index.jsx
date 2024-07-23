@@ -1,19 +1,18 @@
-import { Dropdown, Layout, Avatar } from "antd";
+import { useContext } from "react";
+import { Dropdown, Layout, Avatar, Row, Col } from "antd";
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import AvatarDevDiary from "../../components/Avatar";
-import useUserStore from "../../store";
+import { UserContext } from "../UserContext";
 
 import logo from "../../assets/logo-devdiaryWhite.svg";
-
 import "./index.css";
 
 const { Header } = Layout;
 
 export default function DiaryHeader() {
   const navigate = useNavigate();
-  const user = useUserStore((state) => state.user);
-  const signOut = useUserStore((state) => state.sign_out);
+  const { user } = useContext(UserContext);
 
   const items = [
     {
@@ -31,7 +30,7 @@ export default function DiaryHeader() {
   function onClick(e) {
     if (e.key == 1) navigate("/profile");
 
-    if (e.key == 2) signOut();
+    //if (e.key == 2) signOut(); criar função de signOut (setar userstate para null e direcionar para a tela de login)
   }
 
   return (
@@ -39,7 +38,7 @@ export default function DiaryHeader() {
       <div className="toolbar">
         <img src={logo} />
 
-        <p className="userPosition" style={{ color: "white" }}>
+        <p className="userPosition">
           <Avatar icon={<AvatarDevDiary avatarUrl={user.avatar_url} />} />
           <Dropdown menu={{ items, onClick }}>
             <strong>{user ? `${user.name}` : ""}</strong>

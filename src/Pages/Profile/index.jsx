@@ -1,12 +1,15 @@
-import { useNavigate } from "react-router-dom";
-import { Button } from "antd";
-import { GithubOutlined } from "@ant-design/icons";
-import { useSignInWithGithub } from "../../configs/authMethods";
-import logo from "../../assets/logo-devdiary.svg";
-
-//import "./index.css";
-import useUserStore from "../../store";
+import { Image } from "antd";
+import { useContext } from "react";
+import { UserContext } from "../../components/UserContext";
 
 export default function Profile() {
-  return <h1>Profile page</h1>;
+  const { user, setUser } = useContext(UserContext);
+
+  return (
+    <>
+      <h1>Profile page</h1>
+      <Image alt="Avatar do usário" src={user.avatar_url}></Image>
+      <h1>{user.name}</h1>
+    </>
+  );
 }

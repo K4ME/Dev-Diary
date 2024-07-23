@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #213547;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,34 +23,108 @@ h1 {
   line-height: 1.1;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Estilo para elementos disabled */
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ) !important; /* Cor de texto mais clara para elementos disabled */
+  background-color: #282a36 !important; /* Cor de fundo escura ajustada para melhorar o contraste */
+  border: 1px solid #44475a !important; /* Cor da borda ajustada para maior contraste */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+/* Estilo para elementos normais */
+input,
+textarea,
+select,
+.ant-input,
+.ant-select-selector,
+.ant-picker {
+  background-color: #282a36; /* Cor de fundo mais escura para elementos disabled */
+  border-color: #44475a; /* Cor da borda para elementos disabled */
+  color: #e0e0e0 !important; /* Cor do texto ajustada */
+}
+
+/* Estilo global para o DatePicker */
+.ant-picker {
+  background-color: #282a36 !important; /* Cor de fundo escura para o DatePicker */
+  border: 1px solid #44475a !important; /* Cor da borda escura */
+  color: #f8f8f2 !important; /* Cor do texto clara */
+}
+
+/* Estilo para o input dentro do DatePicker */
+.ant-picker-input > input {
+  background-color: #282a36 !important; /* Cor de fundo escura do input */
+  border: none !important; /* Remover borda do input para integração com o DatePicker */
+  color: #f8f8f2 !important; /* Cor do texto clara */
+  padding: 8px !important; /* Adicionar padding para melhorar o layout */
+  font-size: 16px !important; /* Ajustar o tamanho da fonte se necessário */
+}
+
+/* Estilo para o dropdown do DatePicker */
+.ant-picker-dropdown {
+  background-color: #282a36 !important; /* Cor de fundo do dropdown */
+  border: 1px solid #44475a !important; /* Cor da borda do dropdown */
+}
+
+/* Estilo para as células do calendário no dropdown */
+.ant-picker-dropdown .ant-picker-cell {
+  color: #f8f8f2 !important; /* Cor do texto das células */
+}
+
+.ant-picker-dropdown .ant-picker-cell.ant-picker-cell-in-view {
+  background-color: #44475a !important; /* Cor de fundo das células visíveis */
+  color: #f8f8f2 !important; /* Cor do texto das células visíveis */
+}
+
+.ant-picker-dropdown .ant-picker-cell:hover {
+  background-color: #555 !important; /* Cor de fundo ao passar o mouse sobre as células */
+}
+
+/* Estilo para células desabilitadas no dropdown */
+.ant-picker-dropdown .ant-picker-cell-disabled {
+  background-color: #282a36 !important; /* Cor de fundo das células desabilitadas */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ) !important; /* Cor do texto das células desabilitadas */
+}
+
+/* Estilo para o ícone de calendário dentro do DatePicker */
+.ant-picker-suffix {
+  color: #f8f8f2 !important; /* Cor dos ícones dentro do DatePicker */
+}
+
+/* Estilo para o DatePicker desabilitado */
+.ant-picker-disabled {
+  background-color: #282a36 !important; /* Cor de fundo escura para desabilitado */
+  border-color: #44475a !important; /* Cor da borda para desabilitado */
+}
+
+.ant-picker-disabled .ant-picker-input > input {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ) !important; /* Cor de texto mais clara para desabilitado */
+  background-color: #282a36 !important; /* Cor de fundo escura para desabilitado */
+  border-color: #44475a !important; /* Cor da borda para desabilitado */
+}
+
+/* Estilos para o ícone de fechar do DatePicker */
+.ant-picker-clear {
+  color: #f8f8f2; /* Cor do ícone de fechar */
+}
+
+/* Estilo adicional para garantir que o ícone se ajuste ao tema */
+.ant-picker-clear:hover {
+  color: #e0e0e0; /* Cor do ícone de fechar ao passar o mouse */
+}

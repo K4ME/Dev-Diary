@@ -1,6 +1,7 @@
 import { ConfigProvider } from "antd";
 import AppRoutes from "./AppRoutes";
 import Internationalization from "./components/Internationalization";
+import { UserProvider } from "./components/UserContext";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
             },
           }}
         >
-          <AppRoutes />
+          <UserProvider>
+            <AppRoutes />
+          </UserProvider>
         </ConfigProvider>
       </Internationalization>
     </>

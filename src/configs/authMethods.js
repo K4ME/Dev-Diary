@@ -7,7 +7,8 @@ export function useSignInWithGithub() {
   const signIn = async () => {
     return signInWithPopup(authetication, provider)
       .then((response) => {
-        const { uid, displayName, photoURL } = response.user;
+        const { uid, displayName, photoURL, accessToken } = response.user;
+        localStorage.setItem("token", accessToken);
 
         const user = {
           id: uid,
