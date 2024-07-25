@@ -1,0 +1,69 @@
+/* Custom CSS para o Jodit Editor no padrão do tema Dracula */
+
+.jodit_theme_custom {
+  --jd-color-background-default: #282a36;
+  --jd-color-border: #44475a;
+  --jd-color-panel: #44475a;
+  --jd-color-icon: #f8f8f2;
+}
+.jodit_container {
+  background-color: #282a36 !important; /* Cor de fundo do editor */
+  color: #f8f8f2 !important; /* Cor do texto */
+}
+
+.jodit_toolbar {
+  background-color: #44475a !important; /* Fundo da barra de ferramentas */
+  color: #f8f8f2 !important; /* Cor dos ícones e texto na barra de ferramentas */
+}
+
+.jodit_toolbar .jodit_toolbar_btn,
+.jodit_toolbar .jodit_toolbar_btn:hover {
+  background-color: #44475a !important; /* Fundo dos botões da barra de ferramentas */
+  color: #f8f8f2 !important; /* Cor dos ícones e texto dos botões */
+}
+
+.jodit_wysiwyg {
+  background-color: #282a36 !important; /* Fundo da área de edição */
+  color: #f8f8f2 !important; /* Cor do texto na área de edição */
+}
+
+.jodit_wysiwyg iframe {
+  background-color: #282a36 !important; /* Fundo do iframe do editor */
+}
+
+.jodit_wysiwyg p,
+.jodit_wysiwyg h1,
+.jodit_wysiwyg h2,
+.jodit_wysiwyg h3,
+.jodit_wysiwyg h4,
+.jodit_wysiwyg h5,
+.jodit_wysiwyg h6 {
+  color: #f8f8f2 !important; /* Cor dos textos de cabeçalho e parágrafos */
+}
+
+.jodit_wysiwyg a {
+  color: #8be9fd !important; /* Cor dos links */
+}
+
+.jodit_wysiwyg blockquote {
+  border-left: 4px solid #44475a !important; /* Borda do bloco de citação */
+  padding-left: 16px !important; /* Espaçamento interno do bloco de citação */
+  color: #f8f8f2 !important; /* Cor do texto do bloco de citação */
+}
+
+.jodit_wysiwyg pre {
+  background-color: #1e1e1e !important; /* Fundo do bloco de código */
+  color: #f8f8f2 !important; /* Cor do texto do bloco de código */
+  border: 1px solid #44475a !important; /* Borda do bloco de código */
+  padding: 8px !important; /* Espaçamento interno do bloco de código */
+  overflow-x: auto !important; /* Rolagem horizontal para código longo */
+}
+
+.jodit_wysiwyg .jodit_toolbar_btn {
+  border: none !important; /* Remover borda dos botões na área de edição */
+}
+
+.jodit_wysiwyg .jodit_toolbar_btn:hover {
+  background-color: #44475a !important; /* Fundo dos botões na área de edição ao passar o mouse */
+  color: #f8f8f2 !important; /* Cor dos ícones e texto dos botões ao passar o mouse */
+}

@@ -12,7 +12,7 @@ const { Header } = Layout;
 
 export default function DiaryHeader() {
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const items = [
     {
@@ -30,7 +30,17 @@ export default function DiaryHeader() {
   function onClick(e) {
     if (e.key == 1) navigate("/profile");
 
-    //if (e.key == 2) signOut(); criar função de signOut (setar userstate para null e direcionar para a tela de login)
+    if (e.key == 2) signOut();
+  }
+
+  function signOut() {
+    setUser({
+      id: null,
+      name: null,
+      avatar_url: null,
+    });
+
+    navigate("/login");
   }
 
   return (

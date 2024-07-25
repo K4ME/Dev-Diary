@@ -16,6 +16,8 @@
     "babel-plugin-import": "^1.13.8",
     "dayjs": "^1.11.10",
     "firebase": "^10.1.0",
+    "jodit": "^4.2.27",
+    "jodit-react": "^4.1.2",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "react": "^18.2.0",
