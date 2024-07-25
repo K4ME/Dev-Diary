@@ -1,8 +1,22 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .loginDiv {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #282a36;
+  color: #f8f8f2;
+  height: 100vh; /* Ocupa 100% da altura da viewport */
+  width: 100vw; /* Ocupa 100% da largura da viewport */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove preenchimentos */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
 }
 
 .loginDiv img {

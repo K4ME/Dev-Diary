@@ -31,13 +31,14 @@ export default function DiaryCalendar({
   return (
     <Col span={3}>
       <Affix>
-        <div style={{ marginTop: 24, marginRight: 24 }}>
+        <div style={{ marginTop: 24 }}>
           <DatePicker
             defaultValue={CalendarDate}
             format="DD/MM/YYYY"
             style={{
               width: "100%",
-              fontSize: "36px",
+              fontSize: "42px",
+              marginLeft: 24,
               fontWeight: "bold",
             }}
             onChange={(e) => setCalendarDate(e)}

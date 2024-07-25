@@ -6,12 +6,8 @@ import DiaryNote from "../../components/DiaryNote";
 import dayjs from "dayjs";
 import { FormatDateBR } from "../../Utils/functions";
 import { UserContext } from "../../components/UserContext";
-import {
-  CreateDiary,
-  GetDiariesDates,
-  GetDiary,
-  UpdateDiary,
-} from "../../services/api";
+import { CreateDiary, GetDiary, UpdateDiary } from "../../services/api";
+import "./index.css";
 
 export default function Diary() {
   const { user } = useContext(UserContext);
@@ -78,39 +74,40 @@ export default function Diary() {
   return (
     <>
       <DiaryHeader />
-      <Row justify="start" gutter={[20, 20]}>
-        <Col span={3}></Col>
-        <Col span={18}>
-          <Input
-            disabled={!IsToday}
-            style={{
-              marginTop: 24,
-              marginRight: 24,
-              fontSize: "36px",
-              fontWeight: "bold",
-              width: "100%",
-              height: "52px",
-              padding: "10px",
-            }}
-            placeholder="De um título para a sua nota..."
-            value={CalendarTitle}
-            onChange={(e) => setCalendarTitle(e.target.value)}
+      <div className="mainDiv">
+        <Row justify="start">
+          <Col span={3}></Col>
+          <Col span={16}>
+            <Input
+              disabled={!IsToday}
+              style={{
+                marginTop: 24,
+                fontSize: "36px",
+                fontWeight: "bold",
+                width: "100%",
+                height: "52px",
+                padding: "10px",
+              }}
+              placeholder="De um título para a sua nota..."
+              value={CalendarTitle}
+              onChange={(e) => setCalendarTitle(e.target.value)}
+            />
+          </Col>
+          <DiaryCalendar
+            IdGithub={user.id}
+            CalendarDate={CalendarDate}
+            setCalendarDate={setCalendarDate}
           />
-        </Col>
-        <DiaryCalendar
-          IdGithub={user.id}
-          CalendarDate={CalendarDate}
-          setCalendarDate={setCalendarDate}
-        />
-      </Row>
-      <Row justify="start" gutter={[20, 20]}>
-        <Col span={3}></Col>
-        <DiaryNote
-          Disabled={!IsToday}
-          CalendarNote={CalendarNote}
-          setCalendarNote={setCalendarNote}
-        />
-      </Row>
+        </Row>
+        <Row justify="start">
+          <Col span={3}></Col>
+          <DiaryNote
+            Disabled={!IsToday}
+            CalendarNote={CalendarNote}
+            setCalendarNote={setCalendarNote}
+          />
+        </Row>
+      </div>
     </>
   );
 }

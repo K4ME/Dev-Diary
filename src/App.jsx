@@ -1,19 +1,14 @@
-import { ConfigProvider } from "antd";
+import { ConfigProvider, theme } from "antd";
 import AppRoutes from "./AppRoutes";
 import Internationalization from "./components/Internationalization";
 import { UserProvider } from "./components/UserContext";
+import draculaTheme from "./theme";
 
 function App() {
   return (
     <>
       <Internationalization>
-        <ConfigProvider
-          theme={{
-            token: {
-              colorPrimary: "#00b96b",
-            },
-          }}
-        >
+        <ConfigProvider theme={draculaTheme}>
           <UserProvider>
             <AppRoutes />
           </UserProvider>

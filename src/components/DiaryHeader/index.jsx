@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Dropdown, Layout, Avatar, Row, Col } from "antd";
+import { Dropdown, Layout, Avatar } from "antd";
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import AvatarDevDiary from "../../components/Avatar";
@@ -34,16 +34,18 @@ export default function DiaryHeader() {
   }
 
   return (
-    <Header className={"headerSize"} style={{ backgroundColor: "#00b96b" }}>
+    <Header className="headerSize">
       <div className="toolbar">
-        <img src={logo} />
-
-        <p className="userPosition">
-          <Avatar icon={<AvatarDevDiary avatarUrl={user.avatar_url} />} />
+        <img src={logo} alt="Logo" style={{ width: "98px", height: "98px" }} />
+        <div className="userPosition">
+          <Avatar
+            icon={<AvatarDevDiary avatarUrl={user.avatar_url} />}
+            style={{ marginRight: "8px" }}
+          />
           <Dropdown menu={{ items, onClick }}>
             <strong>{user ? `${user.name}` : ""}</strong>
           </Dropdown>
-        </p>
+        </div>
       </div>
     </Header>
   );

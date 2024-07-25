@@ -2,12 +2,11 @@ import { Col, Input } from "antd";
 
 export default function DiaryNote({ Disabled, CalendarNote, setCalendarNote }) {
   return (
-    <Col span={18}>
+    <Col span={16}>
       <div
         style={{
           marginTop: 24,
-          marginRight: 24,
-          width: "100%",
+          /* width: "100%", */
         }}
       >
         <Input.TextArea
