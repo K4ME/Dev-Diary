@@ -1,0 +1,160 @@
+/* QuillEditor.css */
+
+/* Estilo para o editor */
+.ql-editor {
+  background-color: #282a36 !important; /* Cor de fundo do editor */
+  color: #f8f8f2 !important; /* Cor do texto */
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  min-height: 100vh; /* Altura mínima do editor */
+  padding: 12px; /* Espaçamento interno */
+}
+
+/* Estilo para a barra de ferramentas */
+.ql-toolbar {
+  border-top-left-radius: 8px; /* Arredonda a borda inferior esquerda do editor */
+  border-top-right-radius: 8px; /* Arredonda a borda inferior direita do editor */
+  background-color: #44475a !important; /* Cor de fundo da barra de ferramentas */
+  border: 1px solid #000 !important; /* Cor da borda da barra de ferramentas */
+  color: #f8f8f2 !important; /* Cor do texto */
+}
+
+/* Estilo para o container do editor */
+.ql-container {
+  border-bottom-left-radius: 8px; /* Arredonda a borda inferior esquerda do editor */
+  border-bottom-right-radius: 8px; /* Arredonda a borda inferior direita do editor */
+  border: 1px solid #000 !important; /* Cor da borda do contêiner */
+  background-color: #282a36 !important; /* Cor de fundo do contêiner */
+  color: #f8f8f2 !important; /* Cor do texto do editor */
+}
+
+.ql-container.ql-snow .ql-editor:focus {
+  border: 1px solid #f8f8f2 !important; /* Cor da borda ao focar */
+  border-bottom-left-radius: 8px; /* Arredonda a borda inferior esquerda do editor */
+  border-bottom-right-radius: 8px; /* Arredonda a borda inferior direita do editor */
+}
+
+/* Estilo para os pickers */
+.ql-picker {
+  color: #f8f8f2 !important; /* Cor do texto dos pickers */
+}
+
+.ql-picker-options {
+  background-color: #44475a !important; /* Cor de fundo das opções dos pickers */
+  border: 1px solid #6272a4 !important; /* Cor da borda das opções dos pickers */
+}
+
+.ql-picker-label {
+  color: #f8f8f2 !important; /* Cor do texto dos labels dos pickers */
+}
+
+.ql-picker-item {
+  color: #f8f8f2 !important; /* Cor do texto dos itens dos pickers */
+}
+
+/* Estilo para os ícones */
+.ql-stroke {
+  stroke: #f8f8f2 !important; /* Cor dos ícones */
+}
+
+.ql-fill {
+  fill: #f8f8f2 !important; /* Cor dos ícones preenchidos */
+}
+
+/* Estilo para botões */
+.ql-toolbar .ql-formats button {
+  background-color: #44475a !important; /* Cor de fundo dos botões */
+  border: none; /* Remover borda dos botões */
+  color: #f8f8f2 !important; /* Cor do texto dos botões */
+}
+
+.ql-toolbar .ql-formats button:hover {
+  background-color: #6272a4 !important; /* Cor de fundo dos botões ao passar o mouse */
+}
+
+/* Estilo para o tooltip */
+.ql-snow .ql-tooltip {
+  background-color: #44475a !important; /* Cor de fundo do tooltip */
+  border: 1px solid #6272a4 !important; /* Cor da borda do tooltip */
+  color: #f8f8f2 !important; /* Cor do texto do tooltip */
+}
+
+/* Estilo para dropdowns do menu */
+.ql-snow .ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:focus,
+.ql-snow .ql-toolbar .ql-active {
+  background-color: #6272a4 !important; /* Cor de fundo ao passar o mouse nos botões */
+  color: #f8f8f2 !important; /* Cor do texto ao passar o mouse nos botões */
+}
+
+.ql-snow .ql-toolbar .ql-picker-item:hover,
+.ql-snow .ql-toolbar .ql-picker-label:hover,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active,
+.ql-snow .ql-toolbar .ql-picker-item.ql-active {
+  background-color: #6272a4 !important; /* Cor de fundo ao passar o mouse nos pickers */
+  color: #f8f8f2 !important; /* Cor do texto ao passar o mouse nos pickers */
+}
+
+/* Estilo para dropdown menus */
+.ql-snow .ql-picker-options {
+  background-color: #44475a !important; /* Cor de fundo dos dropdowns */
+  /* border: 1px solid #6272a4 !important; */ /* Cor da borda dos dropdowns */
+}
+
+.ql-snow .ql-picker-options .ql-picker-item {
+  color: #f8f8f2 !important; /* Cor do texto dos itens dos dropdowns */
+}
+
+.ql-snow .ql-picker-options .ql-picker-item:hover,
+.ql-snow .ql-picker-options .ql-picker-item.ql-selected {
+  background-color: #6272a4 !important; /* Cor de fundo ao passar o mouse nos itens dos dropdowns */
+  color: #f8f8f2 !important; /* Cor do texto ao passar o mouse nos itens dos dropdowns */
+}
+
+/* Estilo para os botões do menu */
+.ql-toolbar {
+  background-color: #282a36 !important; /* Cor de fundo da toolbar */
+  /* border: none !important; */ /* Remover borda da toolbar */
+}
+
+.ql-toolbar .ql-formats button,
+.ql-toolbar .ql-formats button:hover,
+.ql-toolbar .ql-formats button:focus,
+.ql-toolbar .ql-formats .ql-picker-label,
+.ql-toolbar .ql-formats .ql-picker-label:hover,
+.ql-toolbar .ql-formats .ql-picker-label.ql-active,
+.ql-toolbar .ql-formats .ql-picker-item,
+.ql-toolbar .ql-formats .ql-picker-item:hover,
+.ql-toolbar .ql-formats .ql-picker-item.ql-selected {
+  background-color: #44475a !important; /* Cor de fundo dos botões */
+  color: #f8f8f2 !important; /* Cor do texto dos botões */
+  border: none; /* Remover bordas */
+}
+
+.ql-toolbar .ql-formats button:hover,
+.ql-toolbar .ql-formats .ql-picker-label:hover,
+.ql-toolbar .ql-formats .ql-picker-item:hover {
+  background-color: #6272a4 !important; /* Cor de fundo dos botões ao passar o mouse */
+  color: #f8f8f2 !important; /* Cor do texto dos botões ao passar o mouse */
+}
+
+.ql-toolbar .ql-picker-options {
+  background-color: #282a36 !important; /* Cor de fundo dos menus dropdown */
+  color: #f8f8f2 !important; /* Cor do texto dos menus dropdown */
+}
+
+.ql-toolbar .ql-picker-options .ql-picker-item {
+  color: #f8f8f2 !important; /* Cor do texto dos itens do dropdown */
+}
+
+.ql-toolbar .ql-picker-options .ql-picker-item:hover {
+  background-color: #6272a4 !important; /* Cor de fundo dos itens do dropdown ao passar o mouse */
+  color: #f8f8f2 !important; /* Cor do texto dos itens do dropdown ao passar o mouse */
+}
+
+.ql-toolbar .ql-picker-label::before {
+  color: #f8f8f2 !important; /* Cor dos ícones dos labels dos dropdowns */
+}
+
+.ql-toolbar .ql-picker-item::before {
+  color: #f8f8f2 !important; /* Cor dos ícones dos itens dos dropdowns */
+}

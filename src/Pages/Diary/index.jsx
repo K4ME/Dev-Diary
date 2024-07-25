@@ -82,6 +82,7 @@ export default function Diary() {
               disabled={!IsToday}
               style={{
                 marginTop: 24,
+                marginBottom: 24,
                 fontSize: "36px",
                 fontWeight: "bold",
                 width: "100%",
