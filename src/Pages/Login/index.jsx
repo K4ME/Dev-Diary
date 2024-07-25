@@ -4,7 +4,8 @@ import { Button } from "antd";
 import { GithubOutlined } from "@ant-design/icons";
 import { useSignInWithGithub } from "../../configs/authMethods";
 import { UserContext } from "../../components/UserContext";
-import logo from "../../assets/logo-devdiary.svg";
+//import logo from "../../assets/logo-devdiary.svg";
+import logo from "../../assets/logo.png";
 import "./index.css";
 
 export default function Login() {
@@ -22,9 +23,9 @@ export default function Login() {
   return (
     <div className="loginDiv">
       <img src={logo} />
-      <p>Bem-vindo ao Dev Diary!</p>
+      <p>Documente suas ideias!</p>
 
-      <Button type="primary" onClick={HandleSignIn}>
+      <Button type="primary" onClick={HandleSignIn} size="large">
         <GithubOutlined /> Logar com Github
       </Button>
     </div>

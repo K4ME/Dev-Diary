@@ -19,7 +19,13 @@ body {
   box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
 }
 
+.loginDiv p {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
 .loginDiv img {
-  width: 200px;
-  height: 200px;
+  width: auto;
+  height: auto;
+  /*  border-radius: 16px; */
 }

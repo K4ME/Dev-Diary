@@ -71,18 +71,24 @@ export default function Diary() {
     }
   }, [CalendarNote, CalendarTitle]);
 
+  const isMobile = window.matchMedia("(max-width: 768px)").matches; // Ajuste o breakpoint conforme necessário
+
   return (
     <>
       <DiaryHeader />
       <div className="mainDiv">
         <Row justify="start">
-          <Col span={3}></Col>
-          <Col span={16}>
+          <DiaryCalendar
+            IdGithub={user.id}
+            CalendarDate={CalendarDate}
+            setCalendarDate={setCalendarDate}
+          />
+          <Col xs={22} sm={22} md={22} lg={17} xl={17}>
             <Input
               disabled={!IsToday}
               style={{
                 marginTop: 24,
-                marginBottom: 24,
+                marginLeft: isMobile ? "16px" : "48px",
                 fontSize: "36px",
                 fontWeight: "bold",
                 width: "100%",
@@ -94,11 +100,6 @@ export default function Diary() {
               onChange={(e) => setCalendarTitle(e.target.value)}
             />
           </Col>
-          <DiaryCalendar
-            IdGithub={user.id}
-            CalendarDate={CalendarDate}
-            setCalendarDate={setCalendarDate}
-          />
         </Row>
         <Row justify="start">
           <Col span={3}></Col>

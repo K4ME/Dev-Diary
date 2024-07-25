@@ -4,7 +4,8 @@
 [x] Alterado tema do projeto.
 [x] Mudar o componente de text o jodit.
 [x] Criar signout.
-[] Testar outro componente de editor de texto, o jodit é muito travado para estilizar. verificar o tiptap https://www.youtube.com/watch?v=-SDxID3BS4I
+[x] Alterar editor de texto para o Quill (https://quilljs.com/docs/api#content)
+[x] Ajustado o projeto para funcionar mobile.
 [] Alterar ícone principal do projeto (colocar no ícone novo fundo transparente e fonte branca).
 [] Publicar back-end.
 [] Arrumar problema de publicação do front.

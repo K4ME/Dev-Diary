@@ -1,41 +1,25 @@
 import React, { useRef, useEffect } from "react";
-import { Col, Input } from "antd";
-import JoditEditor from "jodit-react";
+import { Col } from "antd";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "./QuillEditor.css";
 
 export default function DiaryNote({ Disabled, CalendarNote, setCalendarNote }) {
-  /* const editor = useRef(null);
-
-  const config = {
-    readonly: Disabled,
-    height: 1000,
-    toolbar: true,
-    language: "pt-br",
-    theme: "dark",
-  }; */
+  const isMobile = window.matchMedia("(max-width: 768px)").matches; // Ajuste o breakpoint conforme necessário
 
   return (
-    <Col span={16}>
+    <Col xs={22} sm={22} md={22} lg={17} xl={17}>
       <ReactQuill
+        style={{
+          marginTop: 24,
+          marginLeft: isMobile ? "16px" : "48px",
+          width: "100%",
+        }}
+        readOnly={Disabled}
         value={CalendarNote ? CalendarNote : "Comece a anotar..."}
         onChange={(content) => setCalendarNote(content)}
         theme="snow"
       />
-      {/* <JoditEditor
-          ref={editor}
-          value={CalendarNote ? CalendarNote : "Comece a anotar..."}
-          config={config}
-          onChange={(newContent) => setCalendarNote(newContent)}
-        /> */}
-      {/* <Input.TextArea
-          disabled={Disabled}
-          placeholder="Comece a anotar..."
-          rows={100}
-          value={CalendarNote}
-          onChange={(e) => setCalendarNote(e.target.value)}
-        /> */}
     </Col>
   );
 }

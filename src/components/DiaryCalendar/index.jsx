@@ -28,24 +28,43 @@ export default function DiaryCalendar({
     return !AllowedDates.some((date) => dayjs(date).isSame(current, "day"));
   };
 
+  const isMobile = window.matchMedia("(max-width: 768px)").matches; // Ajuste o breakpoint conforme necessário
+
   return (
-    <Col span={3}>
-      <Affix>
+    <Col xs={22} sm={22} md={22} lg={3}>
+      {isMobile ? (
         <div style={{ marginTop: 24 }}>
           <DatePicker
             defaultValue={CalendarDate}
             format="DD/MM/YYYY"
             style={{
               width: "100%",
+              marginLeft: isMobile ? "16px" : "24px",
               fontSize: "42px",
-              marginLeft: 24,
               fontWeight: "bold",
             }}
             onChange={(e) => setCalendarDate(e)}
             disabledDate={disabledDate}
           />
         </div>
-      </Affix>
+      ) : (
+        <Affix>
+          <div style={{ marginTop: 24 }}>
+            <DatePicker
+              defaultValue={CalendarDate}
+              format="DD/MM/YYYY"
+              style={{
+                width: "100%",
+                marginLeft: isMobile ? "16px" : "24px",
+                fontSize: "42px",
+                fontWeight: "bold",
+              }}
+              onChange={(e) => setCalendarDate(e)}
+              disabledDate={disabledDate}
+            />
+          </div>
+        </Affix>
+      )}
     </Col>
   );
 }
