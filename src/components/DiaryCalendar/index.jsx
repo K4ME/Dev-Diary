@@ -13,6 +13,7 @@ export default function DiaryCalendar({
   useEffect(() => {
     async function LoadData() {
       const allowedDates = await GetDiariesDates(IdGithub);
+
       const formattedDates = allowedDates
         ? allowedDates.map((dateStr) => dayjs(dateStr, "DD/MM/YYYY"))
         : [];

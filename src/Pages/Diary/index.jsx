@@ -25,9 +25,9 @@ export default function Diary() {
 
       if (diary) {
         setDiary(diary);
-        setCalendarNote(diary.diaryText);
-        setCalendarTitle(diary.diaryTitle);
-        setIsToday(diary.diaryDate < FormatDateBR(today) ? false : true);
+        setCalendarNote(diary.DiaryText);
+        setCalendarTitle(diary.DiaryTitle);
+        setIsToday(diary.DiaryDate < FormatDateBR(today) ? false : true);
       }
 
       if (!diary) {
@@ -48,6 +48,7 @@ export default function Diary() {
     LoadData();
   }, [CalendarDate]);
 
+  /*  Esse código estava duplicando o DiaryText e o DiaryTitle
   useEffect(() => {
     if (isFirstRender) {
       setIsFirstRender(false);
@@ -64,6 +65,22 @@ export default function Diary() {
           updatedDiary.DiaryTitle != undefined
             ? updatedDiary.DiaryTitle + CalendarTitle
             : CalendarTitle;
+
+        await UpdateDiary(updatedDiary);
+      }
+      LoadData();
+    }
+  }, [CalendarNote, CalendarTitle]); */
+
+  useEffect(() => {
+    if (isFirstRender) {
+      setIsFirstRender(false);
+    } else {
+      async function LoadData() {
+        const updatedDiary = { ...Diary };
+
+        updatedDiary.DiaryText = CalendarNote;
+        updatedDiary.DiaryTitle = CalendarTitle;
 
         await UpdateDiary(updatedDiary);
       }
