@@ -4,8 +4,8 @@ import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import AvatarDevDiary from "../../components/Avatar";
 import { UserContext } from "../UserContext";
+import Cookies from "js-cookie";
 
-//import logo from "../../assets/logo-devdiaryWhite.svg";
 import logo from "../../assets/logo.png";
 import "./index.css";
 
@@ -40,6 +40,9 @@ export default function DiaryHeader() {
       name: null,
       avatar_url: null,
     });
+
+    Cookies.remove("authToken");
+    Cookies.remove("user");
 
     navigate("/login");
   }

@@ -4,14 +4,13 @@ import { Button } from "antd";
 import { GithubOutlined } from "@ant-design/icons";
 import { useSignInWithGithub } from "../../configs/authMethods";
 import { UserContext } from "../../components/UserContext";
-//import logo from "../../assets/logo-devdiary.svg";
 import logo from "../../assets/logo.png";
 import "./index.css";
 
 export default function Login() {
   const navigate = useNavigate();
   const { signIn } = useSignInWithGithub();
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
 
   async function HandleSignIn() {
     await signIn().then((response) => {

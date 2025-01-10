@@ -18,6 +18,7 @@
     "firebase": "^10.1.0",
     "jodit": "^4.2.27",
     "jodit-react": "^4.1.2",
+    "js-cookie": "^3.0.5",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "quill": "^2.0.2",
