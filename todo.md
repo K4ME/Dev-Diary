@@ -9,5 +9,5 @@
 [x] Resolvido problema de duplicação ao realizar update de informações e dar reload na tela.
 [x] Publicar back-end.
 [x] Publicar mongoDB no atlas.
+[x] Arrumar problema de publicação do front.
 [] Alterar ícone principal do projeto (colocar no ícone novo fundo transparente e fonte branca).
-[] Arrumar problema de publicação do front.
