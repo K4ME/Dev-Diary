@@ -1,5 +1,5 @@
 import { ConfigProvider, theme } from "antd";
-import AppRoutes from "./AppRoutes";
+import AppRoutes from "./appRoutes";
 import Internationalization from "./components/Internationalization";
 import { UserProvider } from "./components/UserContext";
 import draculaTheme from "./theme";
