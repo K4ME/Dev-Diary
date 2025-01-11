@@ -4,7 +4,7 @@ import DiaryCalendar from "../../components/DiaryCalendar";
 import DiaryHeader from "../../components/DiaryHeader";
 import DiaryNote from "../../components/DiaryNote";
 import dayjs from "dayjs";
-import { FormatDateBR } from "../../Utils/functions";
+import { FormatDateBR } from "../../Utils/Functions";
 import { UserContext } from "../../components/UserContext";
 import { CreateDiary, GetDiary, UpdateDiary } from "../../services/api";
 import "./index.css";
