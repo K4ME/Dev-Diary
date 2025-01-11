@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //const DevDiaryApiUrl = "https://localhost:7099/api/DevDiary/";
-const DevDiaryApiUrl = "https://dev-diary-webapi.onrender.com";
+const DevDiaryApiUrl = "https://dev-diary-webapi.onrender.com/api/DevDiary/";
 
 const DiaryApi = axios.create({
   baseURL: DevDiaryApiUrl,
