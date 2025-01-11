@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import ProtectedRoute from "./ProtectedRoute";
-import Diary from "../pages/Diary";
-import Login from "../pages/Login";
+import Diary from "../Pages/Diary";
+import Login from "../Pages/Login";
 import NotFound from "../components/NotFound";
 import Profile from "../Pages/Profile";
 
