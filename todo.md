@@ -10,4 +10,5 @@
 [x] Publicar back-end.
 [x] Publicar mongoDB no atlas.
 [x] Arrumar problema de publicação do front.
+[x] Verificar ao acessar se o token está valido, se não tiver, mandar para tela de login.
 [] Alterar ícone principal do projeto (colocar no ícone novo fundo transparente e fonte branca).
